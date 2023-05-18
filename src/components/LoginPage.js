@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "./AuthContext";
 import axios from "axios";
-import './LoginPage.css'; // Import the CSS file for styling
+import "./LoginPage.css";
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
-  const { user, setUser } = useContext(AuthContext);
+  const { setUser } = useContext(AuthContext);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -24,26 +24,24 @@ const LoginPage = () => {
 
     console.log("Email:", email);
     console.log("Password:", password);
-    setUser({ email: email, password: password });
 
     console.log("Login button clicked");
     try {
-      await axios.post('https://localhost:7201/api/account/login', {
+      await axios
+        .post("https://localhost:7201/api/account/login", {
           email: email,
-          password: password
+          password: password,
         })
         .then((response) => {
-          console.log(response)
-          // Handle the successful response
-          alert("Success login")
           console.log(response.data);
+          setUser({ ...response.data });
+          navigate("/shoes");
         })
         .catch((error) => {
-          alert("Login failed:"+error.response.data)
+          alert("Login failed:" + error.response.data);
           console.log(error);
         });
     } catch (error) {
-      // Handle network or other errors
       console.error("Error occurred:", error);
     }
   };
@@ -70,7 +68,13 @@ const LoginPage = () => {
           />
         </div>
         <button type="submit">Login</button>
-        <button onClick={()=> {navigate("/register")}}>Registration Page</button>
+        <button
+          onClick={() => {
+            navigate("/register");
+          }}
+        >
+          Registration Page
+        </button>
       </form>
     </div>
   );

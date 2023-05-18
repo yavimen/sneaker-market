@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./RegisterPage.css"; // Import the CSS file for styling
+import "./RegisterPage.css";
 import { useNavigate } from "react-router-dom";
 const RegisterPage = () => {
   const [userData, setUserData] = useState({
@@ -26,7 +26,7 @@ const RegisterPage = () => {
         "https://localhost:7201/api/account/register",
         userData
       );
-      alert("Register successfully !")
+      alert("Register successfully !");
       setUserData({
         email: "",
         password: "",
@@ -34,13 +34,11 @@ const RegisterPage = () => {
         surname: "",
         phoneNumber: "",
         city: "",
-      })
+      });
       console.log(response.data);
       navigate("/login");
-      // Handle successful registration
     } catch (error) {
       console.error(error);
-      // Handle registration error
     }
   };
 
@@ -113,7 +111,13 @@ const RegisterPage = () => {
         </div>
 
         <button type="submit">Register</button>
-        <button onClick={()=> {navigate("/login")}}>Login Page</button>
+        <button
+          onClick={() => {
+            navigate("/login");
+          }}
+        >
+          Login Page
+        </button>
       </form>
     </div>
   );

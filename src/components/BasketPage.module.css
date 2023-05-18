@@ -1,0 +1,28 @@
+.basketContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  
+  .tableContainer {
+    max-width: 600px;
+    margin-top: 8px;
+  }
+  
+  .totalPrice {
+    margin-top: 8px;
+  }
+  .clearButton {
+    width: 200px;
+    margin-top: 10px;
+    color: white;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+    

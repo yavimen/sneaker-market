@@ -1,0 +1,61 @@
+.collection-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.shoes-card {
+  flex: 0 0 25%;
+  max-width: 300px;
+  margin: 10px;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .shoes-card {
+    flex: 0 0 33.33%;
+  }
+}
+
+@media (max-width: 768px) {
+  .shoes-card {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .shoes-card {
+    flex: 0 0 100%;
+  }
+}
+.collection-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.collection-title {
+  text-align: center;
+}
+
+.shoes-card {
+  max-width: 300px;
+  margin: 10px;
+}
+
+.shoes-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.category {
+  margin-top: 10px;
+}
+
+.additional-info {
+  margin-top: 10px;
+}

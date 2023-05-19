@@ -15,7 +15,7 @@ const NavigationalBar = () => {
     <nav className="navbar">
       <ul className="navbar-list">
         <li className="navbar-item">
-          <Link to="/shoes" className="navbar-link">
+          <Link to="/" className="navbar-link">
             Shoes
           </Link>
         </li>

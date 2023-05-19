@@ -22,7 +22,7 @@ function App() {
           {user != null && <NavigationalBar />}
           <Routes>
             <Route path="register" element={<RegisterPage />} />
-            <Route path="shoes" element={<ShoesPage />} />
+            <Route path="/" element={<ShoesPage />} />
             <Route path="login" element={<LoginPage />} />
             <Route path="basket" element={<BasketPage />} />
             <Route path="profile" element={<UserProfilePage />} />
